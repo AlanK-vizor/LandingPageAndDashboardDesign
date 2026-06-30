@@ -11,7 +11,7 @@ export function Footer() {
               <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-lg flex items-center justify-center">
                 <div className="w-4 h-4 border-2 border-white rounded-sm" />
               </div>
-              <span className="text-xl font-semibold text-white">ArmLab Kits</span>
+              <span className="text-xl font-semibold text-white">Robotic Arm Kits</span>
             </div>
             <p className="text-gray-400 text-sm">
               Educational robotic arm kits for hands-on learning
@@ -91,7 +91,7 @@ export function Footer() {
 
         <div className="border-t border-gray-800 pt-8">
           <p className="text-gray-400 text-sm text-center">
-            © 2026 ArmLab Kits. All rights reserved.
+            © 2026 Robotic Arm Kits. All rights reserved.
           </p>
         </div>
       </div>

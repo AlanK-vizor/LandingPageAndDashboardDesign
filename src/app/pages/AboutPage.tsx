@@ -37,10 +37,10 @@ export function AboutPage() {
       <main className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <section className="text-center mb-16">
           <h1 className="text-4xl sm:text-5xl font-semibold text-white mb-6">
-            About ArmLab Kits
+            About Robotic Arm Kits
           </h1>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            ArmLab Kits was built to give students and educators a real,
+            Robotic Arm Kits was built to give students and educators a real,
             hands-on way to learn robotics and engineering, one joint, one
             wire, and one line of code at a time.
           </p>
@@ -68,7 +68,7 @@ export function AboutPage() {
 
         <section className="text-center bg-gray-900/50 border border-gray-800/50 rounded-2xl p-10">
           <h2 className="text-2xl font-semibold text-white mb-3">
-            Want to bring ArmLab Kits to your classroom?
+            Want to bring Robotic Arm Kits to your classroom?
           </h2>
           <p className="text-gray-400 mb-6 max-w-xl mx-auto">
             We're happy to talk through pricing, curriculum fit, and getting

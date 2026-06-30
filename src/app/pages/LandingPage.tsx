@@ -150,7 +150,7 @@ export function LandingPage() {
 
           <div className="mt-12 text-center">
             <p className="text-xl text-cyan-400 font-semibold">
-              ArmLab Kits gives students one structured kit that combines hardware, software, and real-time feedback.
+              Robotic Arm Kits gives students one structured kit that combines hardware, software, and real-time feedback.
             </p>
           </div>
         </div>
@@ -545,7 +545,7 @@ export function LandingPage() {
                   <th className="text-left py-4 px-6 text-gray-400 font-semibold">Feature</th>
                   <th className="text-center py-4 px-6 text-gray-400 font-semibold">Traditional Kits</th>
                   <th className="text-center py-4 px-6 text-gray-400 font-semibold">Online Tutorials</th>
-                  <th className="text-center py-4 px-6 text-cyan-400 font-semibold">ArmLab Kits</th>
+                  <th className="text-center py-4 px-6 text-cyan-400 font-semibold">Robotic Arm Kits</th>
                 </tr>
               </thead>
               <tbody>

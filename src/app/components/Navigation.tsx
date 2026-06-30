@@ -23,7 +23,7 @@ export function Navigation() {
             <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-lg flex items-center justify-center shadow-[0_0_20px_-4px_rgba(34,211,238,0.6)]">
               <div className="w-4 h-4 border-2 border-white rounded-sm" />
             </div>
-            <span className="text-lg font-semibold text-white tracking-tight">ArmLab Kits</span>
+            <span className="text-lg font-semibold text-white tracking-tight">Robotic Arm Kits</span>
           </Link>
 
           {/* Desktop nav */}
