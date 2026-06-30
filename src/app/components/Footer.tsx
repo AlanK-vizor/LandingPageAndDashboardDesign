@@ -3,96 +3,70 @@ import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
-    <footer className="bg-gray-950 border-t border-gray-800/50 py-12">
+    <footer className="border-t border-gray-800 bg-gray-950 py-14">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-10 mb-10">
           <div>
-            <div className="flex items-center gap-2 mb-4">
-              <div className="w-8 h-8 bg-gradient-to-br from-cyan-400 to-blue-600 rounded-lg flex items-center justify-center">
-                <div className="w-4 h-4 border-2 border-white rounded-sm" />
+            <div className="flex items-center gap-2.5 mb-4">
+              <div className="w-7 h-7 bg-yellow-400 rounded-sm flex items-center justify-center">
+                <div className="w-3.5 h-3.5 border-2 border-gray-950 rounded-sm" />
               </div>
-              <span className="text-xl font-semibold text-white">Robotic Arm Kits</span>
+              <span className="text-base font-bold text-white">ArmLab</span>
             </div>
-            <p className="text-gray-400 text-sm">
-              Educational robotic arm kits for hands-on learning
+            <p className="text-gray-500 text-sm leading-relaxed">
+              Educational robotic arm kits for students and makers.
             </p>
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-4">Product</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/#kit" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Kit
-                </Link>
-              </li>
-              <li>
-                <Link to="/forum" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Q&A
-                </Link>
-              </li>
-              <li>
-                <Link to="/chat" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Live Chat
-                </Link>
-              </li>
-              <li>
-                <Link to="/dashboard" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Dashboard
-                </Link>
-              </li>
-              <li>
-                <Link to="/#curriculum" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Curriculum
-                </Link>
-              </li>
+            <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Product</h3>
+            <ul className="space-y-2.5">
+              {[
+                { to: "/#kit", label: "Kit" },
+                { to: "/forum", label: "Q&A" },
+                { to: "/chat", label: "Live Chat" },
+                { to: "/#curriculum", label: "Curriculum" },
+              ].map(({ to, label }) => (
+                <li key={to}>
+                  <Link to={to} className="text-gray-500 hover:text-white transition-colors text-sm">
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-4">Company</h3>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/about" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  About Us
-                </Link>
-              </li>
-              <li>
-                <Link to="/#schools" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  For Schools
-                </Link>
-              </li>
-              <li>
-                <Link to="/#contact" className="text-gray-400 hover:text-white transition-colors text-sm">
-                  Contact
-                </Link>
-              </li>
+            <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Company</h3>
+            <ul className="space-y-2.5">
+              {[
+                { to: "/about", label: "About" },
+                { to: "/#schools", label: "For Schools" },
+                { to: "/#contact", label: "Contact" },
+              ].map(({ to, label }) => (
+                <li key={to}>
+                  <Link to={to} className="text-gray-500 hover:text-white transition-colors text-sm">
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h3 className="text-white font-semibold mb-4">Connect</h3>
+            <h3 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Connect</h3>
             <div className="flex gap-4">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Github size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Twitter size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Linkedin size={20} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                <Youtube size={20} />
-              </a>
+              {[Github, Twitter, Linkedin, Youtube].map((Icon, i) => (
+                <a key={i} href="#" className="text-gray-600 hover:text-white transition-colors">
+                  <Icon size={18} />
+                </a>
+              ))}
             </div>
           </div>
         </div>
 
         <div className="border-t border-gray-800 pt-8">
-          <p className="text-gray-400 text-sm text-center">
-            © 2026 Robotic Arm Kits. All rights reserved.
-          </p>
+          <p className="text-gray-600 text-sm">© 2026 ArmLab. All rights reserved.</p>
         </div>
       </div>
     </footer>

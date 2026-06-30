@@ -86,7 +86,21 @@ select
   (select count(*) from replies r where r.thread_id = t.id) as reply_count
 from threads t;
 
--- 6. Enable Realtime on chat_messages so live chat updates instantly.
+-- 6. Early access waitlist (public insert, no auth required)
+create table if not exists waitlist (
+  id uuid primary key default gen_random_uuid(),
+  email text not null unique,
+  name text,
+  interest text check (interest in ('student', 'educator', 'maker')),
+  created_at timestamptz default now()
+);
+
+alter table waitlist enable row level security;
+
+create policy "Anyone can join the waitlist"
+  on waitlist for insert with check (true);
+
+-- 7. Enable Realtime on chat_messages so live chat updates instantly.
 -- In the Supabase Dashboard: Database -> Replication -> toggle "chat_messages" on.
 -- (Or run this, depending on your project's default publication setup):
 alter publication supabase_realtime add table chat_messages;

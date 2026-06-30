@@ -36,66 +36,76 @@ export function AuthPage() {
     <div className="min-h-screen bg-gray-950">
       <Navigation />
 
-      <main className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 max-w-md mx-auto">
+      <main className="pt-36 pb-24 px-4 sm:px-6 lg:px-8 max-w-sm mx-auto">
         {!configured ? (
           <SupabaseSetupNotice />
         ) : (
-          <div className="bg-gray-900/50 border border-gray-800/50 rounded-2xl p-8">
-            <div className="flex gap-2 mb-8 bg-gray-950 border border-gray-800/50 rounded-lg p-1">
+          <div className="border border-gray-800 rounded-md bg-gray-900/20 overflow-hidden">
+            <div className="flex border-b border-gray-800">
               <button
                 onClick={() => setMode("login")}
-                className={`flex-1 py-2 rounded-md text-sm font-medium transition-colors ${
-                  mode === "login" ? "bg-gradient-to-r from-cyan-400 to-blue-600 text-white" : "text-gray-400"
+                className={`flex-1 py-3 text-sm font-semibold transition-colors ${
+                  mode === "login"
+                    ? "bg-yellow-400 text-gray-950"
+                    : "text-gray-500 hover:text-white"
                 }`}
               >
                 Log In
               </button>
               <button
                 onClick={() => setMode("signup")}
-                className={`flex-1 py-2 rounded-md text-sm font-medium transition-colors ${
-                  mode === "signup" ? "bg-gradient-to-r from-cyan-400 to-blue-600 text-white" : "text-gray-400"
+                className={`flex-1 py-3 text-sm font-semibold transition-colors border-l border-gray-800 ${
+                  mode === "signup"
+                    ? "bg-yellow-400 text-gray-950"
+                    : "text-gray-500 hover:text-white"
                 }`}
               >
                 Sign Up
               </button>
             </div>
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form onSubmit={handleSubmit} className="p-6 space-y-4">
               {mode === "signup" && (
                 <div>
-                  <label className="block text-sm text-gray-400 mb-1.5">Username</label>
+                  <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                    Username
+                  </label>
                   <input
                     type="text"
                     required
                     value={username}
                     onChange={(e) => setUsername(e.target.value)}
-                    className="w-full bg-gray-950 border border-gray-800 rounded-lg px-4 py-2.5 text-white text-sm focus:outline-none focus:border-cyan-500/50"
+                    className="w-full bg-gray-950 border border-gray-800 rounded-md px-4 py-2.5 text-white text-sm focus:outline-none focus:border-yellow-400/50 placeholder-gray-700"
                     placeholder="e.g. robo_alan"
                   />
                 </div>
               )}
 
               <div>
-                <label className="block text-sm text-gray-400 mb-1.5">Email</label>
+                <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                  Email
+                </label>
                 <input
                   type="email"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
-                  className="w-full bg-gray-950 border border-gray-800 rounded-lg px-4 py-2.5 text-white text-sm focus:outline-none focus:border-cyan-500/50"
+                  className="w-full bg-gray-950 border border-gray-800 rounded-md px-4 py-2.5 text-white text-sm focus:outline-none focus:border-yellow-400/50 placeholder-gray-700"
                   placeholder="you@example.com"
                 />
               </div>
 
               <div>
-                <label className="block text-sm text-gray-400 mb-1.5">Password</label>
+                <label className="block text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+                  Password
+                </label>
                 <input
                   type="password"
                   required
                   minLength={6}
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full bg-gray-950 border border-gray-800 rounded-lg px-4 py-2.5 text-white text-sm focus:outline-none focus:border-cyan-500/50"
+                  className="w-full bg-gray-950 border border-gray-800 rounded-md px-4 py-2.5 text-white text-sm focus:outline-none focus:border-yellow-400/50 placeholder-gray-700"
                   placeholder="At least 6 characters"
                 />
               </div>
@@ -105,7 +115,7 @@ export function AuthPage() {
               <button
                 type="submit"
                 disabled={submitting}
-                className="w-full bg-gradient-to-r from-cyan-400 to-blue-600 text-white font-medium py-2.5 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50"
+                className="w-full bg-yellow-400 text-gray-950 font-bold py-2.5 rounded-md hover:bg-yellow-300 transition-colors disabled:opacity-50 text-sm"
               >
                 {submitting ? "Please wait..." : mode === "login" ? "Log In" : "Create Account"}
               </button>
@@ -113,7 +123,7 @@ export function AuthPage() {
           </div>
         )}
 
-        <p className="text-center text-gray-500 text-sm mt-6">
+        <p className="text-center text-gray-600 text-sm mt-6">
           <Link to="/" className="hover:text-gray-300 transition-colors">
             ← Back to home
           </Link>

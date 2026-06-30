@@ -74,38 +74,43 @@ export function ChatPage() {
     <div className="min-h-screen bg-gray-950 flex flex-col">
       <Navigation />
 
-      <main className="flex-1 pt-24 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto w-full flex flex-col">
-        <h1 className="text-2xl font-semibold text-white mt-4 mb-1">Live Chat</h1>
-        <p className="text-gray-500 text-sm mb-6">Ask quick questions, share snippets, get instant help.</p>
+      <main className="flex-1 pt-36 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto w-full flex flex-col">
+        <div className="mb-6">
+          <div className="text-xs font-bold tracking-widest text-yellow-400 uppercase mb-3">Community</div>
+          <h1 className="text-2xl font-bold text-white">Live Chat</h1>
+          <p className="text-gray-500 text-sm mt-1">Ask quick questions, share snippets, get instant help.</p>
+        </div>
 
         {!configured ? (
           <SupabaseSetupNotice />
         ) : (
           <>
-            <div className="flex-1 bg-gray-900/30 border border-gray-800/50 rounded-2xl p-4 sm:p-6 overflow-y-auto mb-4 min-h-[50vh] max-h-[60vh] space-y-4">
+            <div className="flex-1 border border-gray-800 rounded-md bg-gray-900/20 overflow-y-auto mb-4 min-h-[50vh] max-h-[55vh]">
               {messages.length === 0 && (
-                <p className="text-gray-500 text-sm text-center mt-10">
-                  No messages yet — say hello 👋
+                <p className="text-gray-600 text-sm text-center mt-12">
+                  No messages yet — say hello
                 </p>
               )}
-              {messages.map((msg) => (
-                <div key={msg.id}>
-                  <div className="flex items-baseline gap-2 mb-1">
-                    <span className="text-sm font-medium text-cyan-400">{msg.author_username}</span>
-                    <span className="text-xs text-gray-600">
-                      {new Date(msg.created_at).toLocaleTimeString([], {
-                        hour: "2-digit",
-                        minute: "2-digit",
-                      })}
-                    </span>
+              <div className="divide-y divide-gray-800/50">
+                {messages.map((msg) => (
+                  <div key={msg.id} className="px-5 py-3">
+                    <div className="flex items-baseline gap-2 mb-1">
+                      <span className="text-xs font-bold text-yellow-400">{msg.author_username}</span>
+                      <span className="text-xs text-gray-700 font-mono">
+                        {new Date(msg.created_at).toLocaleTimeString([], {
+                          hour: "2-digit",
+                          minute: "2-digit",
+                        })}
+                      </span>
+                    </div>
+                    {msg.is_code ? (
+                      <CodeBlock code={msg.body} />
+                    ) : (
+                      <p className="text-gray-300 text-sm whitespace-pre-wrap">{msg.body}</p>
+                    )}
                   </div>
-                  {msg.is_code ? (
-                    <CodeBlock code={msg.body} />
-                  ) : (
-                    <p className="text-gray-300 text-sm whitespace-pre-wrap">{msg.body}</p>
-                  )}
-                </div>
-              ))}
+                ))}
+              </div>
               <div ref={scrollRef} />
             </div>
 
@@ -122,32 +127,34 @@ export function ChatPage() {
                     }
                   }}
                   placeholder={asCode ? "Paste code here..." : "Type a message... (Enter to send)"}
-                  className={`w-full border border-gray-800 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-cyan-500/50 resize-none ${
-                    asCode ? "bg-black/40 text-cyan-300 font-mono" : "bg-gray-900/50 text-white"
+                  className={`w-full border border-gray-800 rounded-md px-4 py-3 text-sm focus:outline-none focus:border-yellow-400/40 resize-none ${
+                    asCode
+                      ? "bg-gray-900 text-gray-300 font-mono"
+                      : "bg-gray-900/50 text-white"
                   }`}
                 />
                 <div className="flex items-center justify-between">
-                  <label className="flex items-center gap-2 text-xs text-gray-500 cursor-pointer">
+                  <label className="flex items-center gap-2 text-xs text-gray-600 cursor-pointer select-none">
                     <input
                       type="checkbox"
                       checked={asCode}
                       onChange={(e) => setAsCode(e.target.checked)}
-                      className="rounded border-gray-700"
+                      className="rounded border-gray-700 accent-yellow-400"
                     />
                     Send as code
                   </label>
                   <button
                     type="submit"
                     disabled={sending || !text.trim()}
-                    className="bg-gradient-to-r from-cyan-400 to-blue-600 text-white text-sm font-medium px-5 py-2 rounded-lg hover:opacity-90 transition-opacity disabled:opacity-50"
+                    className="bg-yellow-400 text-gray-950 text-sm font-bold px-5 py-2 rounded-md hover:bg-yellow-300 transition-colors disabled:opacity-40"
                   >
                     Send
                   </button>
                 </div>
               </form>
             ) : (
-              <p className="text-gray-500 text-sm text-center pb-10">
-                <Link to="/login" className="text-cyan-400 hover:text-cyan-300">
+              <p className="text-gray-600 text-sm text-center pb-10">
+                <Link to="/login" className="text-yellow-400 hover:text-yellow-300">
                   Log in
                 </Link>{" "}
                 to join the conversation.
