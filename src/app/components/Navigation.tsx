@@ -15,14 +15,14 @@ export function Navigation() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-gray-950/90 backdrop-blur-sm border-b border-gray-800">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white border-b border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link to="/" className="flex items-center gap-2.5 shrink-0">
             <div className="w-7 h-7 bg-yellow-400 rounded-sm flex items-center justify-center">
               <div className="w-3.5 h-3.5 border-2 border-gray-950 rounded-sm" />
             </div>
-            <span className="text-base font-bold text-white tracking-tight">ArmLab</span>
+            <span className="text-base font-bold text-gray-900 tracking-tight">ArmLab</span>
           </Link>
 
           {/* Desktop nav */}
@@ -31,7 +31,7 @@ export function Navigation() {
               <Link
                 key={link.to}
                 to={link.to}
-                className="text-gray-400 hover:text-white transition-colors text-sm font-medium"
+                className="text-gray-500 hover:text-gray-900 transition-colors text-sm font-medium"
               >
                 {link.label}
               </Link>
@@ -43,17 +43,17 @@ export function Navigation() {
               <div className="flex items-center gap-4">
                 <Link
                   to="/dashboard"
-                  className="text-gray-400 hover:text-white transition-colors text-sm font-medium"
+                  className="text-gray-500 hover:text-gray-900 transition-colors text-sm font-medium"
                 >
                   Dashboard
                 </Link>
-                <span className="text-gray-700 text-xs">|</span>
-                <span className="text-sm text-gray-500">
+                <span className="text-gray-300 text-xs">|</span>
+                <span className="text-sm text-gray-400">
                   {profile?.username ?? user.email?.split("@")[0]}
                 </span>
                 <button
                   onClick={() => signOut()}
-                  className="text-gray-500 hover:text-white transition-colors"
+                  className="text-gray-400 hover:text-gray-900 transition-colors"
                   title="Log out"
                 >
                   <LogOut size={15} />
@@ -69,9 +69,8 @@ export function Navigation() {
             )}
           </div>
 
-          {/* Mobile toggle */}
           <button
-            className="lg:hidden text-gray-400 hover:text-white transition-colors"
+            className="lg:hidden text-gray-500 hover:text-gray-900 transition-colors"
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle menu"
           >
@@ -79,15 +78,14 @@ export function Navigation() {
           </button>
         </div>
 
-        {/* Mobile menu */}
         {open && (
-          <div className="lg:hidden pb-5 flex flex-col gap-4 border-t border-gray-800 mt-0 pt-4">
+          <div className="lg:hidden pb-5 flex flex-col gap-4 border-t border-gray-200 mt-0 pt-4">
             {links.map((link) => (
               <Link
                 key={link.to}
                 to={link.to}
                 onClick={() => setOpen(false)}
-                className="text-gray-400 hover:text-white transition-colors text-sm font-medium"
+                className="text-gray-500 hover:text-gray-900 transition-colors text-sm font-medium"
               >
                 {link.label}
               </Link>
@@ -97,13 +95,13 @@ export function Navigation() {
                 <Link
                   to="/dashboard"
                   onClick={() => setOpen(false)}
-                  className="text-gray-400 hover:text-white transition-colors text-sm font-medium"
+                  className="text-gray-500 hover:text-gray-900 transition-colors text-sm font-medium"
                 >
                   Dashboard
                 </Link>
                 <button
                   onClick={() => { signOut(); setOpen(false); }}
-                  className="flex items-center gap-1.5 text-gray-500 text-sm text-left"
+                  className="flex items-center gap-1.5 text-gray-400 text-sm text-left"
                 >
                   <LogOut size={14} /> Log Out
                 </button>
