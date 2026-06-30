@@ -199,7 +199,7 @@ export function LandingPage() {
               { icon: AlertCircle, title: "Expensive lab equipment", body: "Professional robots cost thousands and require lab space most students don't have access to." },
               { icon: X, title: "No guidance when things go wrong", body: "Scattered tutorials and DIY kits leave students stuck without support when motors misbehave." },
             ].map(({ icon: Icon, title, body }) => (
-              <div key={title} className="bg-white border border-gray-200 rounded-md p-6">
+              <div key={title} className="bg-white border border-gray-300 rounded-md p-6 shadow-sm">
                 <div className="w-10 h-10 bg-red-50 border border-red-100 rounded-md flex items-center justify-center mb-5">
                   <Icon className="text-red-500" size={20} />
                 </div>
