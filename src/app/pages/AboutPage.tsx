@@ -40,7 +40,7 @@ export function AboutPage() {
           <h1 className="text-5xl font-bold text-white tracking-tight mb-6">About ArmLab</h1>
           <p className="text-gray-400 text-lg max-w-2xl leading-relaxed">
             ArmLab was built to give students and educators a real, hands-on way to learn robotics and
-            engineering — one joint, one wire, and one line of code at a time.
+            engineering, one joint, one wire, and one line of code at a time.
           </p>
         </section>
 

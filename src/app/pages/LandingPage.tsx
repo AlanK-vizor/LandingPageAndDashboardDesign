@@ -190,7 +190,7 @@ export function LandingPage() {
           <div className="mb-14">
             <div className="text-xs font-bold tracking-widest text-yellow-600 uppercase mb-4">The Problem</div>
             <h2 className="text-4xl font-bold text-gray-900 mb-4">The robotics learning gap</h2>
-            <p className="text-gray-500 max-w-xl">Students struggle to bridge theory and practice — and existing options don't bridge that gap.</p>
+            <p className="text-gray-500 max-w-xl">Students struggle to bridge theory and practice, and existing options don't bridge that gap.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -225,7 +225,7 @@ export function LandingPage() {
               <div className="text-xs font-bold tracking-widest text-yellow-600 uppercase mb-4">The Kit</div>
               <h2 className="text-4xl font-bold text-gray-900 mb-4">ArmLab Starter Kit</h2>
               <p className="text-gray-500 mb-10 leading-relaxed">
-                A compact robotic arm designed for students to learn assembly, motion control, kinematics, and automation — with Python or Arduino.
+                A compact robotic arm designed for students to learn assembly, motion control, kinematics, and automation, with Python or Arduino.
               </p>
               <img
                 src="https://images.unsplash.com/photo-1637002722490-5f8ceed9774c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHw1fHxyb2JvdGljJTIwYXJtJTIwaW5kdXN0cmlhbCUyMGF1dG9tYXRpb258ZW58MXx8fHwxNzc5ODU1NjU0fDA&ixlib=rb-4.1.0&q=80&w=1080"
@@ -285,7 +285,7 @@ export function LandingPage() {
           <div className="mb-14">
             <div className="text-xs font-bold tracking-widest text-yellow-400 uppercase mb-4">Platform</div>
             <h2 className="text-4xl font-bold text-white mb-3">Interactive learning system</h2>
-            <p className="text-gray-400 max-w-2xl">Real-time feedback when your arm doesn't behave. Not just a store — a complete educational system.</p>
+            <p className="text-gray-400 max-w-2xl">Real-time feedback when your arm doesn't behave. Not just a store. A complete educational system.</p>
           </div>
 
           <div className="border border-gray-800 rounded-md overflow-hidden">
@@ -295,7 +295,7 @@ export function LandingPage() {
                 <div className="w-3 h-3 rounded-full bg-gray-700" />
                 <div className="w-3 h-3 rounded-full bg-gray-700" />
               </div>
-              <span className="text-xs text-gray-600 font-mono">ArmLab Dashboard — Lesson 04: Calibrating Joint Angles</span>
+              <span className="text-xs text-gray-600 font-mono">ArmLab Dashboard · Lesson 04: Calibrating Joint Angles</span>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-3 divide-y lg:divide-y-0 lg:divide-x divide-gray-800">
@@ -378,7 +378,7 @@ export function LandingPage() {
           <div className="mb-14">
             <div className="text-xs font-bold tracking-widest text-yellow-600 uppercase mb-4">Curriculum</div>
             <h2 className="text-4xl font-bold text-gray-900 mb-3">Structured from day one</h2>
-            <p className="text-gray-500">Assembly to advanced kinematics — no prior experience needed.</p>
+            <p className="text-gray-500">Assembly to advanced kinematics. No prior experience needed.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-200 border border-gray-200 rounded-md overflow-hidden">
@@ -426,7 +426,7 @@ export function LandingPage() {
           <div className="mb-14">
             <div className="text-xs font-bold tracking-widest text-yellow-600 uppercase mb-4">Community</div>
             <h2 className="text-4xl font-bold text-gray-900 mb-3">Learn together. Build together.</h2>
-            <p className="text-gray-500 max-w-2xl">When your arm doesn't move the way you expect, the community has your back — in real time or async.</p>
+            <p className="text-gray-500 max-w-2xl">When your arm doesn't move the way you expect, the community has your back, in real time or async.</p>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -442,7 +442,7 @@ export function LandingPage() {
               </div>
               <div className="p-5 space-y-4 min-h-[200px]">
                 <div><span className="text-xs text-yellow-600 font-bold">sarah_k</span>
-                  <p className="text-sm text-gray-700 mt-0.5">My joint 2 keeps overshooting — any tips?</p></div>
+                  <p className="text-sm text-gray-700 mt-0.5">My joint 2 keeps overshooting, any tips?</p></div>
                 <div><span className="text-xs text-yellow-600 font-bold">rodrigo_m</span>
                   <p className="text-sm text-gray-700 mt-0.5">Try lowering your PWM speed in the config, worked for me</p></div>
                 <div className="bg-gray-950 rounded-md p-3 font-mono text-xs text-gray-300">
@@ -467,7 +467,7 @@ export function LandingPage() {
               <div className="divide-y divide-gray-100">
                 {[
                   { q: "How do I calibrate zero position for all joints at once?", replies: 4, tag: "Calibration" },
-                  { q: "Gripper not gripping — servo moves but no force", replies: 7, tag: "Hardware" },
+                  { q: "Gripper not gripping, servo moves but no force", replies: 7, tag: "Hardware" },
                   { q: "Best Python library for smooth trajectory planning?", replies: 3, tag: "Python" },
                 ].map((thread, i) => (
                   <div key={i} className="px-5 py-4 hover:bg-gray-50 transition-colors">

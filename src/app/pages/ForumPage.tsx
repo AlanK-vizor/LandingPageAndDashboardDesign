@@ -65,7 +65,7 @@ export function ForumPage() {
           <p className="text-gray-600 text-sm">Loading...</p>
         ) : threads.length === 0 ? (
           <div className="text-center border border-gray-800 rounded-md p-14 bg-gray-900/20">
-            <p className="text-gray-500 mb-5">No questions yet — be the first to post one.</p>
+            <p className="text-gray-500 mb-5">No questions yet. Be the first to post one.</p>
             {user ? (
               <Link
                 to="/forum/new"

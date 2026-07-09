@@ -125,7 +125,7 @@ export function ChatPage() {
           <div className="border-b border-gray-800 px-6 py-4 flex items-center gap-2 shrink-0">
             <Hash size={15} className="text-gray-500" />
             <span className="text-white font-semibold">{activeMeta.id}</span>
-            <span className="text-gray-600 text-sm hidden sm:inline">— {activeMeta.desc}</span>
+            <span className="text-gray-600 text-sm hidden sm:inline">· {activeMeta.desc}</span>
           </div>
 
           {!configured ? (
@@ -138,7 +138,7 @@ export function ChatPage() {
               <div className="flex-1 overflow-y-auto px-6 py-4">
                 {messages.length === 0 && (
                   <p className="text-gray-600 text-sm text-center mt-16">
-                    No messages yet in #{activeMeta.id} — say something
+                    No messages yet in #{activeMeta.id}. Say something.
                   </p>
                 )}
                 <div className="space-y-1">
