@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useState, useEffect, useRef, type FormEvent } from "react";
 import { Link } from "react-router-dom";
 import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/Footer";
@@ -114,6 +114,14 @@ function EarlyAccessModal({ onClose }: { onClose: () => void }) {
 
 export function LandingPage() {
   const [showModal, setShowModal] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.muted = true;
+      videoRef.current.play().catch(() => {});
+    }
+  }, []);
 
   return (
     <div className="min-h-screen bg-white text-gray-900">
@@ -123,13 +131,15 @@ export function LandingPage() {
       {/* Hero — full bleed */}
       <section className="relative h-screen min-h-[640px] flex items-end overflow-hidden">
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
           className="absolute inset-0 w-full h-full object-cover object-center"
-          src="/hero.mp4"
-        />
+        >
+          <source src="/hero.mp4" type="video/mp4" />
+        </video>
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20" />
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
