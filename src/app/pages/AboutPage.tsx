@@ -71,8 +71,8 @@ export function AboutPage() {
                 name: "Alankrit Keshari",
                 role: "Co-Founder",
                 degrees: [
+                  "M.S. Robotics & Mechatronics, NYU",
                   "B.S. Robotics & Mechatronics + Mechanical Engineering, Virginia Tech",
-                  "M.S. Robotics & Mechatronics, NYU (in progress)",
                 ],
               },
               {
@@ -99,7 +99,7 @@ export function AboutPage() {
 
             <div className="sm:col-span-2 border border-gray-800 rounded-md p-6 bg-gray-900/20">
               <p className="text-gray-400 text-sm leading-relaxed">
-                We're a two-person team based in Blacksburg, Virginia, building ArmLab from the ground up. Both Virginia Tech graduates, we saw firsthand how hard it was for students to get real hands-on robotics experience without access to expensive lab equipment. We're trying to change that.
+                We're a growing team based in Blacksburg, Virginia, building ArmLab from the ground up. Virginia Tech graduates who saw firsthand how hard it was for students to get real hands-on robotics experience without expensive lab equipment — and always looking for more people who want to help change that.
               </p>
             </div>
           </div>
