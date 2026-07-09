@@ -122,21 +122,14 @@ export function LandingPage() {
 
       {/* Hero — full bleed */}
       <section className="relative h-screen min-h-[640px] flex items-end overflow-hidden">
-        <div className="absolute inset-0 bg-black overflow-hidden">
-          <iframe
-            src="https://www.youtube.com/embed/ZEir102PxJ8?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playlist=ZEir102PxJ8&start=5"
-            allow="autoplay; encrypted-media"
-            title="Robotic demo"
-            className="pointer-events-none absolute top-1/2 left-1/2 border-0"
-            style={{
-              transform: "translate(-50%, -50%)",
-              width: "100vw",
-              height: "56.25vw",
-              minHeight: "100%",
-              minWidth: "177.78vh",
-            }}
-          />
-        </div>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover object-center"
+          src="/hero.mp4"
+        />
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20" />
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
