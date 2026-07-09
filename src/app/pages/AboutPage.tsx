@@ -70,27 +70,38 @@ export function AboutPage() {
               {
                 name: "Alankrit Keshari",
                 role: "Co-Founder",
-                detail: "M.S. Robotics & Mechatronics, NYU",
-                location: "New York, NY",
+                degrees: [
+                  "B.S. Robotics & Mechatronics + Mechanical Engineering, Virginia Tech",
+                  "M.S. Robotics & Mechatronics, NYU (in progress)",
+                ],
               },
               {
                 name: "Freeman Liu",
                 role: "Co-Founder",
-                detail: "B.S. Mechanical Engineering, Virginia Tech",
-                location: "Blacksburg, VA",
+                degrees: [
+                  "B.S. Mechanical Engineering, Virginia Tech",
+                ],
               },
             ].map((founder) => (
-              <div key={founder.name} className="border border-gray-800 rounded-md p-6 bg-gray-900/20 flex items-center gap-5">
-                <div className="w-12 h-12 bg-yellow-400/10 border border-yellow-400/20 rounded-md flex items-center justify-center shrink-0">
+              <div key={founder.name} className="border border-gray-800 rounded-md p-6 bg-gray-900/20 flex items-start gap-5">
+                <div className="w-12 h-12 bg-yellow-400/10 border border-yellow-400/20 rounded-md flex items-center justify-center shrink-0 mt-0.5">
                   <User size={20} className="text-yellow-400" />
                 </div>
                 <div>
                   <h3 className="text-white font-semibold text-base">{founder.name}</h3>
-                  <p className="text-gray-500 text-sm">{founder.role}</p>
-                  <p className="text-gray-600 text-xs mt-1">{founder.detail} · {founder.location}</p>
+                  <p className="text-gray-500 text-sm mb-2">{founder.role}</p>
+                  {founder.degrees.map((d) => (
+                    <p key={d} className="text-gray-600 text-xs leading-relaxed">{d}</p>
+                  ))}
                 </div>
               </div>
             ))}
+
+            <div className="sm:col-span-2 border border-gray-800 rounded-md p-6 bg-gray-900/20">
+              <p className="text-gray-400 text-sm leading-relaxed">
+                We're a two-person team based in Blacksburg, Virginia, building ArmLab from the ground up. Both Virginia Tech graduates, we saw firsthand how hard it was for students to get real hands-on robotics experience without access to expensive lab equipment. We're trying to change that.
+              </p>
+            </div>
           </div>
         </section>
 
