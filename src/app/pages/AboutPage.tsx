@@ -72,7 +72,8 @@ export function AboutPage() {
                 role: "Co-Founder",
                 degrees: [
                   "M.S. Robotics & Mechatronics, NYU",
-                  "B.S. Robotics & Mechatronics + Mechanical Engineering, Virginia Tech",
+                  "B.S. Robotics & Mechatronics, Virginia Tech",
+                  "B.S. Mechanical Engineering, Virginia Tech",
                 ],
               },
               {
