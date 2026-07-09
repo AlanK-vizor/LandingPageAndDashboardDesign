@@ -124,7 +124,7 @@ export function LandingPage() {
       <section className="relative h-screen min-h-[640px] flex items-end overflow-hidden">
         <div className="absolute inset-0 bg-black overflow-hidden">
           <iframe
-            src="https://www.youtube.com/embed/ZEir102PxJ8?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playlist=ZEir102PxJ8"
+            src="https://www.youtube.com/embed/ZEir102PxJ8?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playlist=ZEir102PxJ8&start=5"
             allow="autoplay; encrypted-media"
             title="Robotic demo"
             className="pointer-events-none absolute top-1/2 left-1/2 border-0"
