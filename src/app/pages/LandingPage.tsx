@@ -5,9 +5,6 @@ import { Footer } from "../components/Footer";
 import { supabase } from "../../lib/supabase";
 import { useAuth } from "../context/AuthContext";
 import {
-  Cpu,
-  Wrench,
-  Code,
   BookOpen,
   Users,
   GraduationCap,
@@ -125,11 +122,21 @@ export function LandingPage() {
 
       {/* Hero — full bleed */}
       <section className="relative h-screen min-h-[640px] flex items-end overflow-hidden">
-        <img
-          src="https://images.unsplash.com/photo-1716191299980-a6e8827ba10b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwyfHxyb2JvdGljJTIwYXJtJTIwaW5kdXN0cmlhbCUyMGF1dG9tYXRpb258ZW58MXx8fHwxNzc5ODU1NjU0fDA&ixlib=rb-4.1.0&q=80&w=1920"
-          alt="Robotic arm"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-        />
+        <div className="absolute inset-0 bg-black overflow-hidden">
+          <iframe
+            src="https://www.youtube.com/embed/fn3KWM1kuAw?autoplay=1&mute=1&loop=1&controls=0&showinfo=0&rel=0&modestbranding=1&playlist=fn3KWM1kuAw"
+            allow="autoplay; encrypted-media"
+            title="Robotic demo"
+            className="pointer-events-none absolute top-1/2 left-1/2 border-0"
+            style={{
+              transform: "translate(-50%, -50%)",
+              width: "100vw",
+              height: "56.25vw",
+              minHeight: "100%",
+              minWidth: "177.78vh",
+            }}
+          />
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-black/20" />
 
         <div className="relative z-10 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-20">
