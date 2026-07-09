@@ -100,7 +100,7 @@ export function AboutPage() {
 
             <div className="sm:col-span-2 border border-gray-800 rounded-md p-6 bg-gray-900/20">
               <p className="text-gray-400 text-sm leading-relaxed">
-                We're a growing team based in Blacksburg, Virginia, building ArmLab from the ground up. Virginia Tech graduates who saw firsthand how hard it was for students to get real hands-on robotics experience without expensive lab equipment — and always looking for more people who want to help change that.
+                We're a growing team based in Blacksburg, Virginia, building ArmLab from the ground up. Virginia Tech graduates who saw firsthand how hard it was for students to get real hands-on robotics experience without expensive lab equipment. We're always looking for more people who want to help change that.
               </p>
             </div>
           </div>
