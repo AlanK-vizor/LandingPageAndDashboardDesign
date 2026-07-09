@@ -1,6 +1,6 @@
 import { Navigation } from "../components/Navigation";
 import { Footer } from "../components/Footer";
-import { Target, Users, Lightbulb, Rocket } from "lucide-react";
+import { Target, Users, Lightbulb, Rocket, User } from "lucide-react";
 
 export function AboutPage() {
   const values = [
@@ -60,6 +60,27 @@ export function AboutPage() {
               </div>
             );
           })}
+        </section>
+
+        <section className="mb-20">
+          <div className="text-xs font-bold tracking-widest text-yellow-400 uppercase mb-6">Team</div>
+          <h2 className="text-3xl font-bold text-white mb-10">Founders</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            {[
+              { name: "Alankrit Keshari", role: "Co-Founder" },
+              { name: "Freeman Liu", role: "Co-Founder" },
+            ].map((founder) => (
+              <div key={founder.name} className="border border-gray-800 rounded-md p-6 bg-gray-900/20 flex items-center gap-5">
+                <div className="w-14 h-14 bg-yellow-400/10 border border-yellow-400/20 rounded-md flex items-center justify-center shrink-0">
+                  <User size={24} className="text-yellow-400" />
+                </div>
+                <div>
+                  <h3 className="text-white font-semibold text-base">{founder.name}</h3>
+                  <p className="text-gray-500 text-sm mt-0.5">{founder.role}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </section>
 
         <section className="border border-gray-800 rounded-md p-10 bg-gray-900/20">
