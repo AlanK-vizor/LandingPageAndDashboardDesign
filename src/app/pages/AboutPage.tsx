@@ -80,7 +80,8 @@ export function AboutPage() {
                 name: "Freeman Liu",
                 role: "Co-Founder",
                 degrees: [
-                  "B.S. Mechanical Engineering, Virginia Tech",
+                  "B.S. Robotics & Mechatronics, Virginia Tech",
+                  "B.S. Control, Robotics & Autonomy, Virginia Tech",
                 ],
               },
             ].map((founder) => (
