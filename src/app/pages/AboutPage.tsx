@@ -70,25 +70,25 @@ export function AboutPage() {
               {
                 name: "Alankrit Keshari",
                 role: "Co-Founder",
-                bio: "Virginia Tech graduate in Robotics & Mechatronics and Mechanical Engineering. Trying to build something that makes real hands-on engineering education accessible to every student, regardless of where they are.",
+                detail: "M.S. Robotics & Mechatronics, NYU",
+                location: "New York, NY",
               },
               {
                 name: "Freeman Liu",
                 role: "Co-Founder",
-                bio: "Virginia Tech graduate in Mechanical Engineering. Focused on making ArmLab's hardware reliable, manufacturable, and something students actually enjoy building.",
+                detail: "B.S. Mechanical Engineering, Virginia Tech",
+                location: "Blacksburg, VA",
               },
             ].map((founder) => (
-              <div key={founder.name} className="border border-gray-800 rounded-md p-6 bg-gray-900/20">
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="w-12 h-12 bg-yellow-400/10 border border-yellow-400/20 rounded-md flex items-center justify-center shrink-0">
-                    <User size={20} className="text-yellow-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-white font-semibold text-base">{founder.name}</h3>
-                    <p className="text-gray-500 text-sm">{founder.role}</p>
-                  </div>
+              <div key={founder.name} className="border border-gray-800 rounded-md p-6 bg-gray-900/20 flex items-center gap-5">
+                <div className="w-12 h-12 bg-yellow-400/10 border border-yellow-400/20 rounded-md flex items-center justify-center shrink-0">
+                  <User size={20} className="text-yellow-400" />
                 </div>
-                <p className="text-gray-400 text-sm leading-relaxed">{founder.bio}</p>
+                <div>
+                  <h3 className="text-white font-semibold text-base">{founder.name}</h3>
+                  <p className="text-gray-500 text-sm">{founder.role}</p>
+                  <p className="text-gray-600 text-xs mt-1">{founder.detail} · {founder.location}</p>
+                </div>
               </div>
             ))}
           </div>
