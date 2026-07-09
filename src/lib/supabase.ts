@@ -17,5 +17,6 @@ if (!supabaseConfigured) {
 // when env vars are missing (e.g. during initial setup or build).
 export const supabase = createClient(
   supabaseUrl || "https://placeholder.supabase.co",
-  supabaseAnonKey || "placeholder-anon-key"
+  supabaseAnonKey || "placeholder-anon-key",
+  { auth: { flowType: "implicit" } }
 );
