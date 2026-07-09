@@ -36,7 +36,7 @@ export function AboutPage() {
 
       <main className="pt-36 pb-24 px-4 sm:px-6 lg:px-8 max-w-5xl mx-auto">
         <section className="mb-20">
-          <div className="text-xs font-bold tracking-widest text-yellow-400 uppercase mb-6">About</div>
+          <div className="text-xs font-bold tracking-widest text-yellow-400 uppercase mb-6">About Us</div>
           <h1 className="text-5xl font-bold text-white tracking-tight mb-6">About ArmLab</h1>
           <p className="text-gray-400 text-lg max-w-2xl leading-relaxed">
             ArmLab was built to give students and educators a real, hands-on way to learn robotics and
@@ -67,17 +67,28 @@ export function AboutPage() {
           <h2 className="text-3xl font-bold text-white mb-10">Founders</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {[
-              { name: "Alankrit Keshari", role: "Co-Founder" },
-              { name: "Freeman Liu", role: "Co-Founder" },
+              {
+                name: "Alankrit Keshari",
+                role: "Co-Founder",
+                bio: "Virginia Tech graduate in Robotics & Mechatronics and Mechanical Engineering. Trying to build something that makes real hands-on engineering education accessible to every student, regardless of where they are.",
+              },
+              {
+                name: "Freeman Liu",
+                role: "Co-Founder",
+                bio: "Virginia Tech graduate in Mechanical Engineering. Focused on making ArmLab's hardware reliable, manufacturable, and something students actually enjoy building.",
+              },
             ].map((founder) => (
-              <div key={founder.name} className="border border-gray-800 rounded-md p-6 bg-gray-900/20 flex items-center gap-5">
-                <div className="w-14 h-14 bg-yellow-400/10 border border-yellow-400/20 rounded-md flex items-center justify-center shrink-0">
-                  <User size={24} className="text-yellow-400" />
+              <div key={founder.name} className="border border-gray-800 rounded-md p-6 bg-gray-900/20">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 bg-yellow-400/10 border border-yellow-400/20 rounded-md flex items-center justify-center shrink-0">
+                    <User size={20} className="text-yellow-400" />
+                  </div>
+                  <div>
+                    <h3 className="text-white font-semibold text-base">{founder.name}</h3>
+                    <p className="text-gray-500 text-sm">{founder.role}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="text-white font-semibold text-base">{founder.name}</h3>
-                  <p className="text-gray-500 text-sm mt-0.5">{founder.role}</p>
-                </div>
+                <p className="text-gray-400 text-sm leading-relaxed">{founder.bio}</p>
               </div>
             ))}
           </div>

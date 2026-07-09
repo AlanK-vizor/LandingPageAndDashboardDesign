@@ -9,7 +9,7 @@ export function Navigation() {
 
   const links = [
     { to: "/", label: "Home" },
-    { to: "/about", label: "About" },
+    { to: "/about", label: "About Us" },
     { to: "/forum", label: "Q&A" },
     { to: "/chat", label: "Live Chat" },
   ];
